@@ -1,5 +1,29 @@
 #include "ft_printf.c"
 
+int	ft_putchar(int c)
+{
+	write(1, &c, 1);
+	return (1);
+}
+
+int	ft_putstr(char *str)
+{
+	int	i;
+
+	i = 0;
+	if (str == NULL)
+	{
+		write(1, "(null)", 6);
+		return (6);
+	}
+	while (str[i])
+	{
+		write(1, &str[i], 1);
+		i++;
+	}
+	return (i);
+}
+
 int	ft_conversion(va_list vl, const char format)
 {
 	int	char_printed;
@@ -14,11 +38,11 @@ int	ft_conversion(va_list vl, const char format)
 	else if (format == 'd' || format == 'i')
 		char_printed += ft_putnbr(va_arg(vl, int));
 	else if (format == 'u')
-		char_printed += ft_putunbr(va_arg(vl, unsigned int));
+		char_printed += ft_putunsigned(va_arg(vl, unsigned int));
 	else if (format == 'x' || foarmat == 'X')
 		char_printed += ft_puthex(va_arg(vl, unsigned int), format);
 	else if (format == '%')
-		char_printed += ft_putchar(va_arg(vl, char));
+		char_printed += ft_putchar('%');
 	return (char_printed);
 }
 
