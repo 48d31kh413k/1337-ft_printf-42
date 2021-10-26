@@ -1,4 +1,4 @@
-#include "ft_printf.c"
+#include "ft_printf.h"
 
 int	ft_putchar(int c)
 {
@@ -39,7 +39,7 @@ int	ft_conversion(va_list vl, const char format)
 		char_printed += ft_putnbr(va_arg(vl, int));
 	else if (format == 'u')
 		char_printed += ft_putunsigned(va_arg(vl, unsigned int));
-	else if (format == 'x' || foarmat == 'X')
+	else if (format == 'x' || format == 'X')
 		char_printed += ft_puthex(va_arg(vl, unsigned int), format);
 	else if (format == '%')
 		char_printed += ft_putchar('%');

@@ -15,7 +15,7 @@ int	len_ptr(uintptr_t nb)
 
 void	ft_put_ptr(uintptr_t nb)
 {
-	if (num >= 16)
+	if (nb >= 16)
 	{
 		ft_put_ptr(nb / 16);
 		ft_put_ptr(nb % 16);
@@ -23,9 +23,9 @@ void	ft_put_ptr(uintptr_t nb)
 	else
 	{
 		if (nb <= 9)
-			ft_putchar((num + '0'));
+			ft_putchar((nb + '0'));
 		else
-			ft_putchar((num - 10 + 'a'));
+			ft_putchar((nb - 10 + 'a'));
 	}
 }
 
