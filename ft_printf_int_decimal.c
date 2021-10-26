@@ -59,7 +59,7 @@ char	*ft_itoa(int n)
 	return (str);
 }
 
-int	ft_putunbr(int n)
+int	ft_putnbr(int n)
 {
 	int	len;
 	char	*num;
