@@ -29,7 +29,7 @@ void	ft_put_ptr(uintptr_t nb)
 	}
 }
 
-int	ft_putptr(unsigned long long ptr)
+int	ft_putptr(uintptr_t ptr)
 {
 	int	char_printed;
 

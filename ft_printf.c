@@ -32,9 +32,9 @@ int	ft_conversion(va_list vl, const char format)
 	if (format == 'c')
 		char_printed += ft_putchar(va_arg(vl, int));
 	else if (format == 's')
-		char_printed += ft_putstr(va_arg(vl, char*));
+		char_printed += ft_putstr(va_arg(vl, char *));
 	else if (format == 'p')
-		char_printed += ft_putptr(va_arg(vl, unsigned long long));
+		char_printed += ft_putptr(va_arg(vl, uintptr_t));
 	else if (format == 'd' || format == 'i')
 		char_printed += ft_putnbr(va_arg(vl, int));
 	else if (format == 'u')
@@ -48,9 +48,9 @@ int	ft_conversion(va_list vl, const char format)
 
 int	ft_printf(const char *format, ...)
 {
-	int	i;
+	int		i;
 	va_list	vl;
-	int	char_printed;
+	int		char_printed;
 
 	i = 0;
 	char_printed = 0;

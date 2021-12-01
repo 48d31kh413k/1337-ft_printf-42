@@ -24,7 +24,7 @@ void	ft_put_hex(unsigned int num, const char format)
 	{
 		if (num <= 9)
 			ft_putchar((num + '0'));
-		else 
+		else
 		{
 			if (format == 'x')
 				ft_putchar((num - 10 + 'a'));

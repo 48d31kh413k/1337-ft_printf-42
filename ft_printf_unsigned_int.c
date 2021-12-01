@@ -16,7 +16,7 @@ int	ft_unsigned_len(unsigned int nb)
 char	*ft_uitoa(unsigned int nb)
 {
 	char	*str;
-	int len;
+	int		len;
 
 	len = ft_unsigned_len(nb);
 	str = (char *)malloc(sizeof(char) * (len + 1));
@@ -34,7 +34,7 @@ char	*ft_uitoa(unsigned int nb)
 
 int	ft_putunsigned(unsigned int nb)
 {
-	int	char_printed;
+	int		char_printed;
 	char	*str;
 
 	char_printed = 0;
